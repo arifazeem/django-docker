@@ -1,0 +1,16 @@
+version: '2'
+services:
+    db:
+      image: postgres:latest
+    web:
+      build: .
+      volumes:
+        - .:/scripts
+      command: python manage.py kemigrations
+      command: python  manage.py  migrate
+      command: python manage.py runserver [::]:8000
+      ports:
+        - "8000:8000"
+      links:
+        - db:db
+

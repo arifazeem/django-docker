@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>welcome to docker continer</h1>
+    <form  action="/create" method="POST"> {% csrf_token %}
+      <label for="name">Name</label>
+      <input type="text" name="name" value="" placeholder="full name" > <br>
+      <label for="email">Email</label>
+      <input type="text" name="email" value="" placeholder="emai id"><br>
+      <input type="submit" name="" value="submit">
+    </form>
+
+  </body>
+</html>
